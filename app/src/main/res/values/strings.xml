@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PlayLand</string>
+    <string name="title_activity_juegos_aventura">JuegosAventuraActivity</string>
+    <string name="title_activity_juegos_puzzle">JuegosPuzzleActivity</string>
+    <string name="title_activity_juegos_carreras">JuegosCarrerasActivity</string>
+    <string name="title_activity_juegos_habilidad">JuegosHabilidadActivity</string>
+    <string name="title_activity_categoria">CategoriaActivity</string>
+</resources>
