@@ -25,7 +25,7 @@ class JuegosHabilidadActivity : AppCompatActivity() {
         }
 
         btnJuego3.setOnClickListener {
-            abrirDetalle("Rompecabezas", "Completá figuras complejas usando tu lógica y visión espacial.")
+            abrirDetalle("Pregunta2", "Ponete a prueba con otras personas en este juego de preguntas para saber quién sabe más!.")
         }
 
         btnJuego4.setOnClickListener {

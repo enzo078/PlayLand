@@ -25,7 +25,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/habilidad_juego1"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginEnd="12dp" />
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/habilidad_juego2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginEnd="12dp" />
@@ -65,14 +65,14 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/habilidad_juego3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginEnd="12dp" />
 
             <Button
                 android:id="@+id/btnJuego3"
-                android:text="Rompecabezas"
+                android:text="Pregunta2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/habilidad_juego4"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginEnd="12dp" />
