@@ -5,4 +5,6 @@
     <string name="title_activity_juegos_carreras">JuegosCarrerasActivity</string>
     <string name="title_activity_juegos_habilidad">JuegosHabilidadActivity</string>
     <string name="title_activity_categoria">CategoriaActivity</string>
+    <string name="title_activity_estadisticas">EstadisticasActivity</string>
+    <string name="title_activity_juego_seleccionado">JuegoSeleccionadoActivity</string>
 </resources>

@@ -35,6 +35,11 @@
                 android:text="Bloques Lógicos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnEstadisticasJuego1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver estadísticas" />
         </LinearLayout>
 
         <!-- Juego 2 -->
@@ -55,6 +60,11 @@
                 android:text="Sudoku Master"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnEstadisticasJuego2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver estadísticas" />
         </LinearLayout>
 
         <!-- Juego 3 -->
@@ -75,6 +85,11 @@
                 android:text="Conecta 3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnEstadisticasJuego3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver estadísticas" />
         </LinearLayout>
 
         <!-- Juego 4 -->
@@ -95,6 +110,11 @@
                 android:text="Rompecabezas 3D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnEstadisticasJuego4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver estadísticas" />
         </LinearLayout>
 
         <!-- Botón Volver -->
