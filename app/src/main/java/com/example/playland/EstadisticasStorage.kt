@@ -21,8 +21,23 @@ object EstadisticasStorage {
             put("juego", juego)
         }
 
-        jugadas.put(jugada)
-        prefs.edit().putString(KEY_JUGADAS, jugadas.toString()).apply()
+        val nuevaLista = JSONArray().apply {
+            put(jugada)
+            var contador = 1
+            for (i in 0 until jugadas.length()) {
+                val existente = jugadas.getJSONObject(i)
+                if (existente.getString("juego") == juego) {
+                    if (contador < 10) {
+                        put(existente)
+                        contador++
+                    }
+                } else {
+                    put(existente)
+                }
+            }
+        }
+
+        prefs.edit().putString(KEY_JUGADAS, nuevaLista.toString()).apply()
     }
 
     fun obtenerJugadasPorJuego(context: Context, juego: String): List<JSONObject> {

@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import org.json.JSONObject
 
 class EstadisticasActivity : AppCompatActivity() {
 
@@ -18,17 +19,16 @@ class EstadisticasActivity : AppCompatActivity() {
         listaEstadisticas = findViewById(R.id.listaEstadisticas)
         btnVolverJuego = findViewById(R.id.btnVolverJuego)
 
-        // Recibe el identificador del juego (nombre o id) por Intent
         val nombreJuego = intent.getStringExtra("juego") ?: ""
 
-        // Obtiene solo las jugadas de ese juego
         val jugadas = EstadisticasStorage.obtenerJugadasPorJuego(this, nombreJuego)
-        val listaFormateada = jugadas.map {
-            val nombre = it.getString("nombre")
-            val nivel = it.getInt("nivel")
-            val puntaje = it.getInt("puntaje")
-            val complejidad = it.getString("complejidad")
-            "$nombre - $complejidad - Nivel $nivel - $puntaje pts"
+            .sortedByDescending { it.getInt("puntaje") }
+            .take(10) // máximo 10
+
+        val listaFormateada: List<String> = if (jugadas.isEmpty()) {
+            listOf("Aún no hay estadísticas para este juego.")
+        } else {
+            jugadas.map { formatearJugada(it) }
         }
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaFormateada)
@@ -37,5 +37,13 @@ class EstadisticasActivity : AppCompatActivity() {
         btnVolverJuego.setOnClickListener {
             finish()
         }
+    }
+
+    private fun formatearJugada(jugada: JSONObject): String {
+        val nombre = jugada.getString("nombre")
+        val nivel = jugada.getInt("nivel")
+        val puntaje = jugada.getInt("puntaje")
+        val complejidad = jugada.getString("complejidad")
+        return "$nombre - $complejidad - Nivel $nivel - $puntaje pts"
     }
 }

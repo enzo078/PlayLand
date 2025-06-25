@@ -1,11 +1,13 @@
 package com.example.playland
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class DetalleJuegoActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalle_juego)
@@ -13,6 +15,8 @@ class DetalleJuegoActivity : AppCompatActivity() {
         val tvNombre = findViewById<TextView>(R.id.tvNombreJuego)
         val tvDescripcion = findViewById<TextView>(R.id.tvDescripcionJuego)
         val btnVolver = findViewById<Button>(R.id.btnVolverLista)
+        val btnEstadisticas = findViewById<Button>(R.id.btnVerEstadisticas)
+        val btnJugar = findViewById<Button>(R.id.btnJugar)
 
         // Obtener datos del intent
         val nombre = intent.getStringExtra("nombreJuego") ?: "Juego"
@@ -21,8 +25,20 @@ class DetalleJuegoActivity : AppCompatActivity() {
         tvNombre.text = nombre
         tvDescripcion.text = descripcion
 
+        btnEstadisticas.setOnClickListener {
+            val intent = Intent(this, EstadisticasActivity::class.java)
+            intent.putExtra("juego", nombre) // enviamos el nombre del juego
+            startActivity(intent)
+        }
+
+        //btnJugar.setOnClickListener {
+        //    val intent = Intent(this, JugarActivity::class.java)
+        //    intent.putExtra("juego", nombre)
+        //    startActivity(intent)
+        //}
+
         btnVolver.setOnClickListener {
-            finish() //
+            finish()
         }
     }
 }

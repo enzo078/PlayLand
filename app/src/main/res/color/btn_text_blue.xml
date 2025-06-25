@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado presionado - texto blanco -->
+    <item android:state_pressed="true" android:color="#FFFFFF" />
+    <!-- Estado normal - texto verde -->
+    <item android:color="#023e8a" />
+</selector>

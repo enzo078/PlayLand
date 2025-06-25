@@ -6,11 +6,15 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Estadísticas del Juego"
         android:textAppearance="?android:textAppearanceLarge"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:padding="9dp"
+        android:background="@drawable/title_background"
+        android:textColor="#FFFFFF"/>
 
     <ListView
         android:id="@+id/listaEstadisticas"
@@ -24,5 +28,7 @@
         android:id="@+id/btnVolverJuego"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Volver al Juego" />
+        android:text="Volver al Juego"
+        android:background="@drawable/btn_rounded_blue"
+        android:textColor="@color/btn_text_blue"/>
 </LinearLayout>
