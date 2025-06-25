@@ -14,6 +14,7 @@ class CategoriaActivity : AppCompatActivity() {
         val btnCarreras = findViewById<Button>(R.id.btnCarreras)
         val btnPuzzle = findViewById<Button>(R.id.btnPuzzle)
         val btnHabilidad = findViewById<Button>(R.id.btnHabilidad)
+        val btnVolver = findViewById<Button>(R.id.btnVolver)
 
         btnAventura.setOnClickListener {
             startActivity(Intent(this, JuegosAventuraActivity::class.java))
@@ -29,6 +30,10 @@ class CategoriaActivity : AppCompatActivity() {
 
         btnHabilidad.setOnClickListener {
             startActivity(Intent(this, JuegosHabilidadActivity::class.java))
+        }
+
+        btnVolver.setOnClickListener {
+            finish() //
         }
     }
 }
