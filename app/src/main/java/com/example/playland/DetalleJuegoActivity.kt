@@ -18,7 +18,6 @@ class DetalleJuegoActivity : AppCompatActivity() {
         val btnEstadisticas = findViewById<Button>(R.id.btnVerEstadisticas)
         val btnJugar = findViewById<Button>(R.id.btnJugar)
 
-        // Obtener datos del intent
         val nombre = intent.getStringExtra("nombreJuego") ?: "Juego"
         val descripcion = intent.getStringExtra("descripcionJuego") ?: "Sin descripción disponible."
 
@@ -31,11 +30,11 @@ class DetalleJuegoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //btnJugar.setOnClickListener {
-        //    val intent = Intent(this, JugarActivity::class.java)
-        //    intent.putExtra("juego", nombre)
-        //    startActivity(intent)
-        //}
+        btnJugar.setOnClickListener {
+            val intent = Intent(this, InicioSimulacionActivity::class.java)
+            intent.putExtra("juego", nombre)
+            startActivity(intent)
+        }
 
         btnVolver.setOnClickListener {
             finish()

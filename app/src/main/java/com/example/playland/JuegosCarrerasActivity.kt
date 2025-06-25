@@ -34,10 +34,9 @@ class JuegosCarrerasActivity : AppCompatActivity() {
         }
 
         btnVolver.setOnClickListener {
-            val intent = Intent(this, CategoriaActivity::class.java)
-            startActivity(intent)
             finish()
         }
+
     }
 
     private fun abrirDetalle(nombre: String, descripcion: String) {

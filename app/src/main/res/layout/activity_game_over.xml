@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/gameoverr" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <TextView android:id="@+id/tvResultado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingTop="16dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="62dp" />
+
+    <Button
+        android:id="@+id/btnVolverDetalle"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rounded_green"
+        android:text="Salir"
+        android:textColor="@color/btn_text_green" />
+
+</LinearLayout>

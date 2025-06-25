@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ssss" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="52dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juego en curso..."
+        android:textColor="#4BE40E"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_rounded_green"
+        android:text="Finalizar Partida"
+        android:textColor="@color/btn_text_green" />
+
+</LinearLayout>

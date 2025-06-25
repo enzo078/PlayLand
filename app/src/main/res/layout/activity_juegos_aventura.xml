@@ -18,7 +18,7 @@
             android:padding="8dp">
 
             <TextView
-                android:text="Juegos de Puzzle"
+                android:text="Juegos de Aventura"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"

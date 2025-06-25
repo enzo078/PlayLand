@@ -17,26 +17,25 @@ class JuegosAventuraActivity : AppCompatActivity() {
         val btnVolver = findViewById<Button>(R.id.btnVolverCategorias)
 
         btnJuego1.setOnClickListener {
-            abrirDetalle("Explorador Fantástico", "Descripción detallada del juego Explorador Fantástico.")
+            abrirDetalle("Explorador Fantástico", "¡Únete a una emocionante expedición por tierras desconocidas! Explora vastos paisajes, descubre artefactos antiguos y enfrenta desafíos que pondrán a prueba tu valentía y estrategia.")
         }
 
         btnJuego2.setOnClickListener {
-            abrirDetalle("Selva Misteriosa", "Descripción detallada del juego Selva Misteriosa.")
+            abrirDetalle("Selva Misteriosa", "Embárcate en una aventura en lo más profundo de la selva, donde criaturas misteriosas y secretos ancestrales te esperan. Resuelve enigmas, supera peligros y desvela los secretos ocultos de la jungla.")
         }
 
         btnJuego3.setOnClickListener {
-            abrirDetalle("Cueva del Tesoro", "Descripción detallada del juego Cueva del Tesoro.")
+            abrirDetalle("Cueva del Tesoro", "Adéntrate en una cueva legendaria llena de tesoros perdidos y trampas mortales. Demuestra tu habilidad para superar obstáculos y recolectar riquezas invaluables en esta emocionante expedición subterránea.")
         }
 
         btnJuego4.setOnClickListener {
-            abrirDetalle("Isla Perdida", "Descripción detallada del juego Isla Perdida.")
+            abrirDetalle("Isla Perdida", "Descubre los misterios de una isla olvidada en medio del océano. Navega por aguas turbulentas, explora ruinas antiguas y desafía los peligros naturales para desentrañar los secretos que guarda este remoto paraíso.")
         }
 
         btnVolver.setOnClickListener {
-            val intent = Intent(this, CategoriaActivity::class.java)
-            startActivity(intent)
             finish()
         }
+
     }
 
     private fun abrirDetalle(nombre: String, descripcion: String) {
